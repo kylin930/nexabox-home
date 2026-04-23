@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexabox Studio</title>
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"/>
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .avatar-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: -10px;
+            border: 2px solid #fff;
+            vertical-align: middle;
+        }
+        .team-card {
+            height: 100%;
+        }
+        .project-img-placeholder {
+            height: 160px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #757575;
+            font-size: 48px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-blue">
+
+    <header class="mdui-appbar mdui-appbar-fixed">
+        <div class="mdui-toolbar mdui-color-theme">
+            <span class="mdui-typo-title">Nexabox Studio</span>
+            <div class="mdui-toolbar-spacer"></div>
+            <a href="dreamos.html" class="mdui-btn mdui-btn-icon mdui-ripple" mdui-tooltip="{content: 'Dream OS 进度'}">
+                <i class="mdui-icon material-icons">developer_board</i>
+            </a>
+            <a href="javascript:;" class="mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple">加入我们</a>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <div class="mdui-container">
+            <h1 class="mdui-typo-display-2 mdui-text-color-white">Nexabox 工作室</h1>
+            <p class="mdui-typo-headline mdui-text-color-white-secondary">涵盖开发、视频制作、文学创作的多元化极客团队</p>
+            <br>
+            <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-white mdui-text-color-primary" mdui-dialog="{target: '#join-dialog'}">招贤纳士 / 投递简历</button>
+        </div>
+    </div>
+
+    <div class="mdui-container mdui-m-t-4 mdui-m-b-4">
+        
+        <h2 class="mdui-typo-display-1 mdui-text-color-theme">团队与分工</h2>
+        <div class="mdui-row">
+            <div class="mdui-col-sm-6 mdui-col-md-4 mdui-m-b-2">
+                <div class="mdui-card team-card">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">小说创作</div>
+                        <div class="mdui-card-primary-subtitle">文学与世界观架构</div>
+                    </div>
+                    <div class="mdui-card-content">
+                        <img src="https://q1.qlogo.cn/g?b=qq&nk=3947664563&s=100" class="avatar-img" mdui-tooltip="{content: '一只理智的屑'}">
+                        <span class="mdui-m-l-2">一只理智的屑负责</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mdui-col-sm-6 mdui-col-md-4 mdui-m-b-2">
+                <div class="mdui-card team-card">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">视频与鬼畜</div>
+                        <div class="mdui-card-primary-subtitle">流浪地球、病毒开箱等影像创作</div>
+                    </div>
+                    <div class="mdui-card-content">
+                        <img src="https://q1.qlogo.cn/g?b=qq&nk=985397561&s=100" class="avatar-img" mdui-tooltip="{content: 'name star'}">
+                        <img src="https://q1.qlogo.cn/g?b=qq&nk=3947664563&s=100" class="avatar-img" mdui-tooltip="{content: '一只理智的屑'}">
+                        <span class="mdui-m-l-2">name star, 一只理智的屑</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mdui-col-sm-6 mdui-col-md-4 mdui-m-b-2">
+                <div class="mdui-card team-card">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">Dream OS 系统</div>
+                        <div class="mdui-card-primary-subtitle">自研底层操作系统项目</div>
+                    </div>
+                    <div class="mdui-card-content">
+                        <img src="https://q1.qlogo.cn/g?b=qq&nk=1507302793&s=100" class="avatar-img" mdui-tooltip="{content: 'delta'}">
+                        <img src="https://q1.qlogo.cn/g?b=qq&nk=3775610318&s=100" class="avatar-img" mdui-tooltip="{content: '小林'}">
+                        <span class="mdui-m-l-2">delta, 小林</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mdui-row">
+            <div class="mdui-col-xs-12 mdui-m-b-2">
+                <div class="mdui-card">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">技术编程组</div>
+                        <div class="mdui-card-primary-subtitle">硬核技术（</div>
+                    </div>
+                    <div class="mdui-card-content">
+                        <img src="https://q1.qlogo.cn/g?b=qq&nk=1507302793&s=100" class="avatar-img" mdui-tooltip="{content: 'delta'}">
+                        <img src="https://q1.qlogo.cn/g?b=qq&nk=3775610318&s=100" class="avatar-img" mdui-tooltip="{content: '小林'}">
+                        <img src="https://q1.qlogo.cn/g?b=qq&nk=3927614454&s=100" class="avatar-img" mdui-tooltip="{content: '董二千'}">
+                        <img src="https://q1.qlogo.cn/g?b=qq&nk=3819873814&s=100" class="avatar-img" mdui-tooltip="{content: 'offmn-user'}">
+                        <img src="https://q1.qlogo.cn/g?b=qq&nk=1193349804&s=100" class="avatar-img" mdui-tooltip="{content: '卢比扬卡一日游'}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mdui-divider mdui-m-y-4"></div>
+
+        <h2 class="mdui-typo-display-1 mdui-text-color-theme">核心项目</h2>
+        <div class="mdui-row">
+            <div class="mdui-col-sm-6 mdui-col-md-3 mdui-m-b-2">
+                <div class="mdui-card">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">ShellLibrary.Cmd</div>
+                        <div class="mdui-card-primary-subtitle">by offmn-user</div>
+                    </div>
+                    <div class="mdui-card-content">
+                        一个高度可定制的 Shell 框架。支持在30分钟内构建专属 Shell，可任意裁剪甚至出现空 Shell，正在研究脚本引擎兼容与可变语法。
+                    </div>
+                    <div class="mdui-card-actions">
+                        <a href="https://github.com/OFFMN-SHARP/ShellLibrary.Cmd" target="_blank" class="mdui-btn mdui-ripple mdui-text-color-theme-accent">GitHub 仓库</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mdui-col-sm-6 mdui-col-md-3 mdui-m-b-2">
+                <div class="mdui-card">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">CoreSight</div>
+                        <div class="mdui-card-primary-subtitle">by 董二千</div>
+                    </div>
+                    <div class="mdui-card-content">
+                        内部测试发布版本，运行环境需依赖 <code>dotnet 10.0</code>。注：托盘关于窗体开发中，点击无响应属于正常现象。
+                    </div>
+                </div>
+            </div>
+
+            <div class="mdui-col-sm-6 mdui-col-md-3 mdui-m-b-2">
+                <div class="mdui-card">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">神州红兔子 (病毒)</div>
+                        <div class="mdui-card-primary-subtitle">by 董二千</div>
+                    </div>
+                    <div class="mdui-card-content">
+                        还在做
+                    </div>
+                </div>
+            </div>
+
+            <div class="mdui-col-sm-6 mdui-col-md-3 mdui-m-b-2">
+                <div class="mdui-card mdui-color-blue-grey-900 mdui-text-color-white">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title mdui-text-color-white">Dream OS</div>
+                        <div class="mdui-card-primary-subtitle mdui-text-color-white-secondary">by 小林 & delta</div>
+                    </div>
+                    <div class="mdui-card-content">
+                        从零构建的微内核操作系统实验项目。探索底层奥秘，Rust与汇编驱动。
+                    </div>
+                    <div class="mdui-card-actions">
+                        <a href="dreamos.html" class="mdui-btn mdui-ripple mdui-text-color-white">查看进度文档</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mdui-divider mdui-m-y-4"></div>
+
+        <h2 class="mdui-typo-display-1 mdui-text-color-theme">视频成品区</h2>
+        <div class="mdui-row">
+            <div class="mdui-col-md-8 mdui-m-b-2">
+                <div class="mdui-card">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">流浪地球3剧情还原</div>
+                        <div class="mdui-card-primary-subtitle">制作者: name star / 一只理智的屑</div>
+                    </div>
+                    <div class="mdui-card-content">
+                        <div class="video-container">
+                            <iframe src="//player.bilibili.com/player.html?bvid=BV1TRAkz4E9N&page=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mdui-col-md-4 mdui-m-b-2">
+                <div class="mdui-card mdui-color-grey-200">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">即将上线</div>
+                        <div class="mdui-card-primary-subtitle">Work in Progress</div>
+                    </div>
+                    <div class="mdui-card-content mdui-typo">
+                        <h4>神州红兔子、病毒开箱视频</h4>
+                        <p>制作中...</p>
+                        <div class="mdui-spinner mdui-spinner-color-theme"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mdui-divider mdui-m-y-4"></div>
+
+        <h2 class="mdui-typo-display-1 mdui-text-color-theme">留言板</h2>
+        <div class="mdui-card mdui-p-a-2">
+    <div class="mdui-row">
+        <div class="mdui-col-sm-6">
+            <div class="mdui-textfield">
+                <i class="mdui-icon material-icons">account_circle</i>
+                <input class="mdui-textfield-input" type="text" id="board-nickname" placeholder="你的昵称 (必填)"/>
+            </div>
+        </div>
+        <div class="mdui-col-sm-6">
+            <div class="mdui-textfield">
+                <i class="mdui-icon material-icons">fingerprint</i>
+                <input class="mdui-textfield-input" type="number" id="board-qq" placeholder="QQ号 (选填，用于显示头像)"/>
+            </div>
+        </div>
+    </div>
+    <div class="mdui-textfield">
+        <i class="mdui-icon material-icons">textsms</i>
+        <textarea class="mdui-textfield-input" id="board-content" placeholder="留个印记吧..." rows="3"></textarea>
+    </div>
+    <button id="board-submit" class="mdui-btn mdui-btn-raised mdui-color-theme mdui-ripple mdui-float-right">发送留言</button>
+    <div class="mdui-clearfix"></div>
+    
+    <ul class="mdui-list mdui-m-t-3" id="board-list">
+        <div class="mdui-spinner mdui-spinner-color-theme mdui-center"></div>
+    </ul>
+</div>
+
+    <div class="mdui-dialog" id="join-dialog">
+        <div class="mdui-dialog-title">加入 Nexabox</div>
+        <div class="mdui-dialog-content">可加入qq群：277466643</div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+        </div>
+    </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const listContainer = document.getElementById('board-list');
+    const submitBtn = document.getElementById('board-submit');
+    const nicknameInput = document.getElementById('board-nickname');
+    const qqInput = document.getElementById('board-qq');
+    const contentInput = document.getElementById('board-content');
+
+    // 解析头像：有 QQ 号就用 QQ 头像，没有就用 DiceBear 生成随机头像
+    const getAvatar = (qq, nickname) => {
+        if (qq && qq.trim() !== '') {
+            return `https://q1.qlogo.cn/g?b=qq&nk=${qq}&s=100`;
+        }
+        return `https://api.dicebear.com/7.x/adventurer/svg?seed=${encodeURIComponent(nickname)}`;
+    };
+
+    // 格式化时间
+    const formatDate = (isoString) => {
+        const date = new Date(isoString);
+        return `${date.getMonth() + 1}-${date.getDate()} ${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`;
+    };
+
+    async function loadMessages() {
+        try {
+            const response = await fetch('/api/messages');
+            const messages = await response.json();
+            
+            listContainer.innerHTML = ''; 
+            
+            if (messages.length === 0) {
+                listContainer.innerHTML = '<li class="mdui-list-item"><div class="mdui-list-item-content">暂无留言，来抢个沙发吧！</div></li>';
+                return;
+            }
+
+            messages.forEach((msg, index) => {
+                const li = document.createElement('li');
+                li.className = 'mdui-list-item mdui-ripple';
+                li.innerHTML = `
+                    <div class="mdui-list-item-avatar"><img src="${getAvatar(msg.qq, msg.nickname)}"/></div>
+                    <div class="mdui-list-item-content">
+                        <div class="mdui-list-item-title">${msg.nickname} <span class="mdui-text-color-grey-500 mdui-typo-caption mdui-m-l-1">${formatDate(msg.created_at)}</span></div>
+                        <div class="mdui-list-item-text">${msg.content}</div>
+                    </div>
+                `;
+                listContainer.appendChild(li);
+                
+                if (index < messages.length - 1) {
+                    const divider = document.createElement('li');
+                    divider.className = 'mdui-divider-inset mdui-m-y-0';
+                    listContainer.appendChild(divider);
+                }
+            });
+            mdui.mutation();
+        } catch (error) {
+            console.error('加载留言失败:', error);
+            listContainer.innerHTML = '<li class="mdui-list-item"><div class="mdui-text-color-red">留言加载失败</div></li>';
+        }
+    }
+
+    submitBtn.addEventListener('click', async () => {
+        const nickname = nicknameInput.value.trim();
+        const qq = qqInput.value.trim();
+        const content = contentInput.value.trim();
+
+        if (!nickname || !content) {
+            mdui.snackbar({ message: '昵称和内容都不能为空哦！' });
+            return;
+        }
+
+        submitBtn.setAttribute('disabled', 'true');
+
+        try {
+            const response = await fetch('/api/messages', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ nickname, qq, content })
+            });
+
+            if (response.ok) {
+                mdui.snackbar({ message: '留言发送成功！' });
+                contentInput.value = ''; 
+                loadMessages(); 
+            } else if (response.status === 429) {
+                // 拦截 429 状态码并提示
+                const errorMsg = await response.text();
+                mdui.snackbar({ message: errorMsg });
+            } else {
+                mdui.snackbar({ message: '发送失败，请稍后再试。' });
+            }
+        } catch (error) {
+            mdui.snackbar({ message: '网络错误，发送失败。' });
+        } finally {
+            submitBtn.removeAttribute('disabled');
+        }
+    });
+
+    loadMessages();
+});
+</script>
+</body>
+</html>
