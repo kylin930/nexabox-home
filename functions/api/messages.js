@@ -24,7 +24,7 @@ export async function onRequestPost(context) {
         // 检查是否还在冷却期中
         const isLimited = await context.env.KV_BOARD.get(rateLimitKey);
         if (isLimited) {
-            return new Response("发送太频繁啦，请休息一分钟后再试", { status: 429 });
+            return new Response("发送频繁了喵！休息一下吧", { status: 429 });
         }
 
         // 3. 构建新留言对象
